@@ -31,7 +31,7 @@
   "scripts": {
     "setup": "git submodule init && git submodule update && cd source && yarn && cd .. && yarn",
     "vender": "cp -r source/shells/chrome/ vender && rm -rf vender/src && rm -rf vender/webpack.config.js",
-    "build": "rm -rf vender && cd source && yarn build && cd .. && yarn vender",
+    "build": "rm -rf vender && cd source && npm run build && cd .. && npm run vender",
     "lint": "standard --fix",
     "test": "yarn lint && electron example/usage",
     "preship": "yarn test && yarn build",
